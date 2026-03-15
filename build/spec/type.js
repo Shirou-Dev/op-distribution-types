@@ -1,29 +1,22 @@
-export enum Type {
-
-    Library = 'Library',
-    ForgeHosted = 'ForgeHosted',
-    Forge = 'Forge',
-    Fabric = 'Fabric',
-    NeoForge = 'NeoForge', // เพิ่ม NeoForge
-    LiteLoader = 'LiteLoader',
-    ForgeMod = 'ForgeMod',
-    FabricMod = 'FabricMod',
-    NeoForgeMod = 'NeoForgeMod', // เพิ่ม NeoForgeMod
-    LiteMod = 'LiteMod',
-    File = 'File',
-    VersionManifest = 'VersionManifest'
-
-}
-
-export interface TypeMetadata {
-
-    id: string
-    defaultExtension?: string
-
-}
-
-export const TypeMetadata: {[property: string]: TypeMetadata} = {
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TypeMetadata = exports.Type = void 0;
+var Type;
+(function (Type) {
+    Type["Library"] = "Library";
+    Type["ForgeHosted"] = "ForgeHosted";
+    Type["Forge"] = "Forge";
+    Type["Fabric"] = "Fabric";
+    Type["NeoForge"] = "NeoForge";
+    Type["LiteLoader"] = "LiteLoader";
+    Type["ForgeMod"] = "ForgeMod";
+    Type["FabricMod"] = "FabricMod";
+    Type["NeoForgeMod"] = "NeoForgeMod";
+    Type["LiteMod"] = "LiteMod";
+    Type["File"] = "File";
+    Type["VersionManifest"] = "VersionManifest";
+})(Type || (exports.Type = Type = {}));
+exports.TypeMetadata = {
     Library: {
         id: Type.Library,
         defaultExtension: 'jar'
@@ -43,7 +36,7 @@ export const TypeMetadata: {[property: string]: TypeMetadata} = {
         id: Type.Fabric,
         defaultExtension: 'jar'
     },
-    NeoForge: { // เพิ่ม Metadata สำหรับ NeoForge
+    NeoForge: {
         id: Type.NeoForge,
         defaultExtension: 'jar'
     },
@@ -59,7 +52,7 @@ export const TypeMetadata: {[property: string]: TypeMetadata} = {
         id: Type.FabricMod,
         defaultExtension: 'jar'
     },
-    NeoForgeMod: { // เพิ่ม Metadata สำหรับ NeoForgeMod
+    NeoForgeMod: {
         id: Type.NeoForgeMod,
         defaultExtension: 'jar'
     },
@@ -74,5 +67,4 @@ export const TypeMetadata: {[property: string]: TypeMetadata} = {
         id: Type.VersionManifest,
         defaultExtension: 'json'
     }
-
-}
+};
